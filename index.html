@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Weather App</h1>
+
+    <form id="weatherForm" class="card form">
+      <label for="city">City / Location</label>
+      <div class="row">
+        <input id="city" type="text" placeholder="e.g., Mumbai" autocomplete="off" />
+        <button type="submit">Submit</button>
+      </div>
+      <p id="message" class="message" aria-live="polite"></p>
+    </form>
+
+    <section id="result" class="card result hidden" aria-live="polite">
+      <div class="result-top">
+        <div>
+          <h2 id="place"></h2>
+          <p id="desc" class="muted"></p>
+        </div>
+        <img id="icon" alt="" />
+      </div>
+
+      <div class="result-bottom">
+        <p class="temp"><span id="temp"></span>°C</p>
+        <p class="muted">Feels like: <span id="feels"></span>°C</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
